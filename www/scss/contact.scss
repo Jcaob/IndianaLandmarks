@@ -20,7 +20,7 @@
 
     #contact-para{
         margin-top: 50px;
-        width: 400px;
+        width: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -65,4 +65,30 @@
 
         }
 
+    }
+
+    @media (max-width: $mobileWidth){
+    
+        .contact{
+            flex-direction: column;
+
+            .contact-info{
+                width:  300px;
+            }
+
+            .contact-form{
+                width: 300px;
+
+                .contact-input{
+                    width: 100%;
+                }
+
+                .contact-input2{
+                    width: 100%;
+                }
+                .submit{
+                    width: 100%;
+                }
+            }
+        }
     }

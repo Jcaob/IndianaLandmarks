@@ -253,8 +253,21 @@ h1, h2, h3, h4, h5, h6, p {
     width: 350px;
   }
 }
-.landmark-details .header {
+.landmark-details {
+  margin-bottom: 25px;
   padding: 0 30px;
+  background-color: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.landmark-details .half {
+  width: 48%;
+}
+.landmark-details .half .header {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,23 +279,184 @@ h1, h2, h3, h4, h5, h6, p {
       align-content: baseline;
   margin: 15px 0 20px;
 }
-.landmark-details .header .title {
+.landmark-details .half .header .title {
+  margin-bottom: 0;
+  font-family: LM;
+  font-size: 28px;
+}
+.landmark-details .half .header .ctrls a button {
+  height: 25px;
+  width: 25px;
+  margin-bottom: -2px;
+}
+.landmark-details .details {
+  position: relative;
+}
+.landmark-details .details .photo {
+  height: 35vh;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+}
+.landmark-details .details .smTitle {
+  font-family: LM;
+  font-size: 18px;
+}
+.landmark-details .details .smInfo {
+  margin-left: 30px;
+  font-family: LM;
+  font-size: 16px;
+}
+.landmark-details .details .smInfo span {
+  font-size: 10px;
+}
+.landmark-details .details p {
+  font-family: NeuReg;
+  font-size: 16px;
+  padding: 0 15px;
+}
+.landmark-details .chapters {
+  overflow: scroll;
+}
+.landmark-details .chapters .tblContents {
+  margin: 15px 0 20px;
+  width: 100%;
+  height: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+.landmark-details .chapters .tblContents .title {
+  display: none;
   margin-bottom: 0;
   font-family: LM;
   font-size: 24px;
 }
-.landmark-details .location-data {
+.landmark-details .chapters .tblContents .ch_jump {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
-.landmark-details .location-data .half {
+.landmark-details .chapters .tblContents .ch_jump a, .landmark-details .chapters .tblContents .ch_jump span {
+  margin-bottom: 0;
+  font-family: LM;
+  color: #000;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.landmark-details .chapters .tblContents .ch_jump a {
+  text-decoration: none;
+  padding: 0 5%;
+}
+.landmark-details .chapters .tblContents .ch_jump a button {
+  height: 25px;
+  width: 25px;
+  margin-bottom: -2px;
+}
+.landmark-details .chapters .tblContents .ch_jump a:hover {
+  font-family: LMB;
+}
+.landmark-details .chapters .chapter-banner {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(122, 135, 96, 0.7)), to(rgba(122, 135, 96, 0.7))), url("../assets/images/SunsetTerrace.jpg");
+  background-image: linear-gradient(rgba(122, 135, 96, 0.7), rgba(122, 135, 96, 0.7)), url("../assets/images/SunsetTerrace.jpg");
+  background-position: 50% 93%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 30px;
+}
+.landmark-details .chapters .chapter-banner .chap {
+  color: rgb(205, 235, 148);
+  -webkit-filter: drop-shadow(0 5px 5px rgb(48, 51, 41));
+          filter: drop-shadow(0 5px 5px rgb(48, 51, 41));
+  margin-bottom: 0;
+}
+.landmark-details .chapters .chapter-banner .numb {
+  font-family: NeuItal;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.landmark-details .chapters .chapter-banner .title {
+  font-family: LM;
+  font-size: 16px;
+}
+.landmark-details .chapters .chapter .gallery {
+  width: 100%;
+  margin-top: 25px;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.landmark-details .chapters .chapter .gallery .photo {
+  height: 200px;
   width: 48%;
-  height: 50px;
-  background-color: #5e1608;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 15px;
+}
+.landmark-details .chapters .chapter .prose {
+  font-family: NeuReg;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+@media (max-width: 850px) {
+  .landmark-details {
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .landmark-details .half {
+    width: 100%;
+  }
+  .landmark-details .chapters {
+    margin: 15px 0 30px;
+  }
+  .landmark-details .chapters .tblContents {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .landmark-details .chapters .tblContents .title {
+    display: block;
+  }
 }
 .ld-detail {
   width: 500px;
@@ -658,7 +832,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .contact-info #contact-para {
   margin-top: 50px;
-  width: 400px;
+  width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -705,8 +879,32 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
 }
 
+@media (max-width: 850px) {
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact-info {
+    width: 300px;
+  }
+  .contact .contact-form {
+    width: 300px;
+  }
+  .contact .contact-form .contact-input {
+    width: 100%;
+  }
+  .contact .contact-form .contact-input2 {
+    width: 100%;
+  }
+  .contact .contact-form .submit {
+    width: 100%;
+  }
+}
 #qr-head {
   font-family: LM;
+  color: rgb(205, 235, 148);
 }
 
 .qr-body {
@@ -768,7 +966,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #qr-img {
-  height: 359px;
+  height: 450px;
   width: 400px;
   background-color: antiquewhite;
 }
@@ -941,16 +1139,16 @@ h1, h2, h3, h4, h5, h6, p {
         align-content: center;
   }
   .hero .collage {
-    height: 260px;
+    height: 150px;
     width: 65%;
     position: absolute;
-    top: 180px;
-    left: 0px;
+    top: 280px;
+    left: -20px;
   }
   .hero .hero-text {
     width: 50%;
-    font-size: 35px;
-    top: 240px;
+    font-size: 30px;
+    top: 280px;
     right: 0px;
     text-align: center;
     color: #FFF;
@@ -1347,6 +1545,10 @@ h1, h2, h3, h4, h5, h6, p {
 @font-face {
   font-family: NeuBld;
   src: url(fonts/neuton/Neuton-Bold.ttf);
+}
+@font-face {
+  font-family: NeuItal;
+  src: url(fonts/neuton/Neuton-italic.ttf);
 }
 footer {
   background-color: rgb(11, 3, 45);
